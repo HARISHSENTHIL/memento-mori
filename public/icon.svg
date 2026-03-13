@@ -1,0 +1,18 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="180" rx="34" fill="#111111"/>
+
+  <!-- Top half: time remaining (light) -->
+  <path d="M 32 32 L 148 32 L 148 38 L 94 87 L 86 87 L 32 38 Z" fill="#e5e5e5"/>
+
+  <!-- Bottom half: time elapsed (amber) -->
+  <path d="M 32 148 L 148 148 L 148 142 L 94 93 L 86 93 L 32 142 Z" fill="#c4a465"/>
+
+  <!-- Neck -->
+  <rect x="86" y="87" width="8" height="6" fill="#777777"/>
+
+  <!-- Top cap -->
+  <rect x="32" y="32" width="116" height="6" rx="1" fill="#e5e5e5"/>
+
+  <!-- Bottom cap -->
+  <rect x="32" y="142" width="116" height="6" rx="1" fill="#c4a465"/>
+</svg>
