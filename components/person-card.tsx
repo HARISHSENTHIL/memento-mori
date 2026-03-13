@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import type { Person } from "@/lib/people"
 
@@ -35,7 +36,13 @@ interface PersonCardProps {
 }
 
 export function PersonCard({ person, color }: PersonCardProps) {
-  const { yearsLeft, percentLived, born } = getStats(person)
+  const [stats, setStats] = useState<{ yearsLeft: number; percentLived: number; born: string } | null>(null)
+  
+  useEffect(() => {
+    setStats(getStats(person))
+  }, [person])
+
+  const { yearsLeft, percentLived, born } = stats ?? { yearsLeft: 0, percentLived: 0, born: "" }
   const initials = person.name
     .split(" ")
     .map((w) => w[0])
